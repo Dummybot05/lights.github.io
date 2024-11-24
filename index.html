@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nostaligic</title>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+      body {
+    margin:0;
+    padding:0;
+    
+}
+#box {
+    height:100vh;
+    width:100vw;
+    background-color:#000;
+}
+  </style>
+    </head>
+    <body>
+        <div id="box" onclick="rerum()">
+            
+        </div>
+        <script>
+function ne(x, y) {
+    let a = document.createElement("div");
+    a.style.position = "absolute";
+    a.style.height = "10px";
+    a.style.width = "10px";
+    a.style.backgroundColor = `rgba(255,0,0, ${Math.random()})`;
+    a.style.borderRadius = "10px";
+    a.style.left = x+'px';
+    a.style.top = y+'px'; document.getElementById("box").appendChild(a);
+}
+function rerum() {
+for(i = 0; i < Math.random() * 200; i++) {
+    ne(Math.random() * 380, Math.random() * 700)
+}
+}
+//console.log(Math.random())
+        </script>
+    </body>
+</html>
